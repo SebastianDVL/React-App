@@ -1,19 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App{
+  padding: 1em;
+  margin-bottom: 15vh;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +11,26 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.song-item{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play-button{
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
+
+.player{
+  height: 15vh;
+  background-color: #222836;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.control-button{
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
