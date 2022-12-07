@@ -1,36 +1,146 @@
 .App{
-  padding: 1em;
-  margin-bottom: 15vh;
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.2em;
   color: white;
+  display: flex;
+}
+
+.groups-view{
+  flex:5;
+  padding: 0em 1em;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.songs-view{
+  flex:3;
+  padding: 0em 1em;
+  background-color: #1e2127;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .song-item{
   display: flex;
+  padding: .4em;
 }
 
+.song-item:hover{
+  background-color: #353943;
+  border-radius: .2em;
+}
+.song-name{
+  margin-left: .5em;
+}
 .play-button{
   background-color: transparent;
   border: none;
   outline: none;
+  margin-right: .5em;
 }
 
 .player{
-  height: 15vh;
   background-color: #222836;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
+  padding: 1em;
 }
 
 .control-button{
   filter: brightness(0) invert(1);
   cursor: pointer;
 }
+
+audio{
+  position: absolute;
+  right:0;
+  visibility: hidden;
+}
+
+.current-song{
+  color:purple;
+}
+
+.player-button{
+  width: 2.5em;
+}
+
+.playlist-img{
+  width: 6em;
+  height: 6em;
+}
+
+.playlists-container{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0, 1fr));
+  gap:1.5em;
+}
+
+[class~='playlists-container']:last-of-type,.songs-container {
+ margin-bottom: 17vh;
+}
+
+
+.subcontainer-artist{
+  color:#9aa0ad;
+  font-size: .7em;
+}
+
+.subcontainer-name{
+  font-weight: bolder;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+  width:99%;
+}
+.subcontainer{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #1e2127;
+  padding: .8em;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.subcontainer p{
+  margin: 0;
+}
+
+.subcontainer img{
+  width: 100%;
+  height: 6.5em;
+  margin-bottom: .5em;
+}
+
+
+.personalized-scroll::-webkit-scrollbar {
+    width: .4em;
+  }
+   
+  .personalized-scroll::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
+   
+  .personalized-scroll::-webkit-scrollbar-thumb {
+    background-color:  #111825;
+    border-radius: 1em 1em;
+  }
+
+  
+.customized-scroll::-webkit-scrollbar {
+  width: .4em;
+}
+ 
+  .customized-scroll::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
+  
+  .customized-scroll::-webkit-scrollbar-thumb {
+    background-color:  #899bbe;
+    border-radius: 1em 1em;
+  }
 
