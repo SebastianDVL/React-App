@@ -4,7 +4,7 @@ import { consumeAPI } from "../api/service.js";
 function NewReleases(props) {
     const [newReleases,setNewReleases] = useState([])
     const [isLoading,setLoading] = useState(false)
-
+    
     async function getNewReleases(){
         try {
             setLoading(true)
